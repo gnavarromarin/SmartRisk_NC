@@ -1,16 +1,20 @@
 import pandas as pd
-import numpy as np  
+import numpy as np
 from imblearn.over_sampling import SMOTE
 from sklearn.preprocessing import StandardScaler
 # Modelos
-from sklearn.linear_model import LogisticRegression, LogisticRegressionCV
+from sklearn.linear_model import LogisticRegression
 # Split
 from sklearn.model_selection import train_test_split
+
+
 def algoritmo():
- 
-    # Cargamos el dataset
-    df = pd.read_csv("../../data/csv/df_concat_a.csv")
-    df = df.drop(columns="Unnamed: 0")
+    # Opcion
+    df = pd.read_csv(
+        "C:/Users/Acer/Documents/Repositorios_Github/SmartRisk_NC/data/csv/df_concat_a.csv")
+    # Cargamos el datasetpip
+    # df = pd.read_csv("../../data/csv/df_concat_a.csv")
+    # df = df.drop(columns="Unnamed: 0")
 
     # Oversampling
     smote = SMOTE(random_state=16)
